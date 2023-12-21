@@ -1,0 +1,31 @@
+<!-- Questão 01 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+<body>
+    <p>Informe uma nota entre 0 e 10</p>
+
+    <input type="number" id="num">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res"></div>
+<script>
+function enviar() {
+    var res = document.getElementById('res')
+    var num = document.getElementById('num')
+    var n = Number(num.value)
+
+    if (n < 0 || n > 10 || n.length == 0) {
+        alert('Informe um valor entre 0 e 10')
+
+    } else {
+        res.innerText = 'Recebemos o seu valor :D'
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- questão 2 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario e Senha</title>
+</head>
+<body>
+    Usuario:<input type="text" id="usuario">
+    Senha:<input type="text" id="senha">
+    <input type="submit" value="Enviar" onclick="enviar()">
+
+<script>
+    function enviar() {
+        var usu = document.getElementById('usuario')
+        var sen = document.getElementById('senha')
+        var u = String(usu.value)
+        var s = String(sen.value)
+
+        if (u == s) {
+            alert('sua senha e usuario devem ser diferentes')
+        } 
+    }
+    
+</script>
+</body>
+</html>
