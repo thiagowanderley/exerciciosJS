@@ -1,0 +1,82 @@
+<!-- Questão 3 -->
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação</title>
+</head>
+<body>
+<p>Nome: <input id="nome" type="text"></p>
+<p>Idade: <input type="number" name="idade" id="idade"></p>
+<p>Salario: <input type="number" name="sal" id="sal"></p>
+<p>Sexo:
+     M<input type="radio" name="sexo" id="masc">
+     F<input type="radio" name="sexo" id="fem">
+</p>
+<p>Estado Civil:
+    S<input type="radio" name="estadocivil" id="solteiro">
+    C<input type="radio" name="estadocivil" id="casado">
+    V<input type="radio" name="estadocivil" id="viuvo">
+    D<input type="radio" name="estadocivil" id="divorciado">
+</p>
+<br>
+<input type="button" value="Enviar" onclick="dados()">
+
+<div id="res">
+
+</div>
+
+    <script>
+        function dados() {
+            var res = document.getElementById('res')
+            var nome = document.getElementById('nome')
+            var idade = document.getElementById('idade')
+            var sal = document.getElementById('sal')
+            var sex = document.getElementsByName('sexo')
+            var civil = document.getElementsByName('estadocivil')
+            var n = String(nome.value)
+            var i = Number(idade.value)
+            var s = Number(sal.value)
+            var genero = ''
+            var estado = ''
+
+
+           if (n === '' || i === '' || s === '') {
+            alert('Preencha todos os campos')
+
+           } else if (n.length < 4) {
+            alert('[ERRO] Campo "nome" precisa ter mais que tres caracteres')
+
+           } else if (i < 0 || i > 150) {
+            alert('[ERRO] Campo "Idade" precisa ser meior que 0 ou menor que 150')
+
+           } else if (s <= 0) {
+            alert('[ERRO] Campo "Salario" precisa ser meior que zero (0)')
+
+           } 
+
+           
+           if (sex[0].checked) {
+            var genero = String('Masculino')
+           } else if (sex[1].checked) {
+            var genero = String('Feminino')
+           }
+
+           if (civil[0].checked) {
+            var estado = 'Solteiro'
+           } else if (civil[1].checked) {
+            var estado = 'Casado'
+           } else if (civil[2].checked) {
+            var estado = 'Viuvo'
+           } else if (civil[3].checked) {
+            var estado = 'Divorciado'
+           }
+
+           res.innerText = `Ola ${n}, identificamos que voce tem ${i} anos e recebe em media R$${s}. Identificamos tambem que voce é do sexo ${genero} e atualmente está ${estado}`
+           
+
+        }
+    </script>
+</body>
+</html>
