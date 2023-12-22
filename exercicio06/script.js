@@ -5,10 +5,9 @@ for(x = 0; x <= 20; x++) {
 }
 
 
-/*
+
 var num = 0
 do {
     num++
     console.log(`${num}`)
 } while (num < 20)
-*/

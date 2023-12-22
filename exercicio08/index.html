@@ -1,0 +1,34 @@
+<!-- Questão 08 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media e soma</title>
+
+</head>
+<body>
+    <input type="button" value="Media e Soma" onclick="mediasoma()">
+    <div id="res"></div>
+    <script>
+        function mediasoma() {
+            var res = document.getElementById('res')
+            
+            var na = Number(prompt('Digite o primeiro numero'))
+            var nb = Number(prompt('Digite o segundo numero'))
+            var nc = Number(prompt('Digite o terceiro numero'))
+            var nd = Number(prompt('Digite o quarto numero'))
+            var ne = Number(prompt('Digite o quinto numero'))
+
+            var soma = na + nb + nc + nd + ne
+            var media = (na + nb + nc + nd + ne) / 5
+
+            res.innerHTML = `
+            <p> A <strong>soma</strong> dos Números é ${soma}</p>
+            <p> A <strong>media</strong> dos Números é ${media}</p>
+            `
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- Questão 07 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior numero</title>
+</head>
+<body>
+    <input type="button" value="Identificar o Maior numero" onclick="maiorNumero()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function maiorNumero() {
+            var res = document.getElementById('res')
+            
+            var na = Number(prompt('Digite o primeiro numero'))
+            var nb = Number(prompt('Digite o segundo numero'))
+            var nc = Number(prompt('Digite o terceiro numero'))
+            var nd = Number(prompt('Digite o quarto numero'))
+            var ne = Number(prompt('Digite o quinto numero'))
+
+            var maxi = Math.max(na,nb,nc,nd,ne)
+
+            res.innerHTML = `O maior numero escolhido é ${maxi}`
+        }
+    </script>
+</body>
+</html>
