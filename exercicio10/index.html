@@ -9,7 +9,37 @@
     <input type="button" value="Enviar" onclick="consolidar()">
     <div id="res"></div>
     <script>
-        function
+        function consolidar() {
+            var res = document.getElementById('res')
+            var a = Number(prompt('Digite o primeiro numero'))
+            var b = Number(prompt('Digite o segundo numero'))
+            var max = Math.max(a, b)
+
+            if (a > b) {
+            do {
+                b++
+              res.innerHTML = `${b++}`
+            } while (b < a)
+             } else if (a < b) {
+            do {
+                a++
+                res.innerHTML = `${a++}`
+            } while (a < b)
+            }
+
+            /*
+            if (a > b) {
+                do {
+                    b++
+                    res.innerHTML = `O maior numero é ${max} e a sequencia é: <br>${b}`
+                } while (b < a)
+            } else if (a < b) {
+                do {
+                    a++
+                    res.innerHTML = `O maior numero é ${max} e a sequencia é: <br>${a}`
+                } while (a < b)
+            }*/
+        }
     </script>
 </body>
 </html>

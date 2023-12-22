@@ -1,4 +1,4 @@
-var a = 38
+var a = 3
 var b = 34
 
 if (a > b) {
