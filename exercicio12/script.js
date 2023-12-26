@@ -1,8 +1,6 @@
-var numero = 4
-var mult = 0
-var x = mult * numero
+var t = 6
+var m = 0
 
-do {
-    mult++
-    console.log(`${x++}`)
-} while (mult < 11)
+for(var m = 0 ; m < 11 ; m++ ) {
+    console.log(`O valor de ${t} x ${m} = ${t*m}`)
+}

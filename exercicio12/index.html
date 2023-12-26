@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,20 +10,59 @@
         <p>Digite um número entre 1 a 10 para gerar uma tabuada:</p>
         <input type="number" name="num" id="num" max="10" min="1" maxlength="10">
         <p><input type="button" value="Eniar" onclick="tabuada()"></p>
-        <p id="put" style="display: none;">Gabriela é minha putinha</p>
         <div id="res"></div>
 
 <script>
     function tabuada() {
-        var num = document.getElementById('num').value
+        var t = document.getElementById('num').value
         var res = document.getElementById('res')
-        var mult = 0
+        var m = 0
 
-        for(x = num * mult; mult < 11; mult++) {
-            res.innerHTML = `${x}`
+        for(var m = 0 ; m < 11 ; m++ ) {
+           res.innerHTML = `O valor de ${t} x ${m} = ${t*m}`
         }
         
     }
 </script>
 </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Generator</title>
+    <script>
+        function gerarTabuada() {
+            // Obtém o número digitado pelo usuário
+            var numero = parseInt(document.getElementById("numero").value);
+
+            // Verifica se o usuário inseriu um número válido
+            if (isNaN(numero)) {
+                alert("Por favor, insira um número válido.");
+            } else {
+                // Gera a tabuada
+                var tabuada = "";
+                for (var i = 1; i <= 10; i++) {
+                    var resultado = numero * i;
+                    tabuada += `${numero} x ${i} = ${resultado}<br>`;
+                }
+
+                // Exibe a tabuada na div com id "output"
+                document.getElementById("output").innerHTML = tabuada;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada Generator</h1>
+    
+    <label for="numero">Digite um número:</label>
+    <input type="text" id="numero">
+
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+    <div id="output"></div>
+</body>
 </html>
+
